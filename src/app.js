@@ -1,17 +1,21 @@
+import "./styles.scss";
+
 import angular from "angular";
 import uiRouter from "@uirouter/angularjs";
 
 import routerConfig from "./route";
-import parentController from "./parentController";
+import rootComponent from "./rootComponent";
 import landingComponent from "./landing/landingComponent";
-
-import "./styles.scss";
+import headerComponent from "./header/headerComponent";
+import aboutComponent from "./about/aboutComponent";
 
 angular
   .module("angularReact", ["ui.router"])
   .config(routerConfig)
-  .controller("parentController", parentController)
-  .component("landingComponent", landingComponent);
+  .component("root", rootComponent)
+  .component("header", headerComponent)
+  .component("landingComponent", landingComponent)
+  .component("aboutComponent", aboutComponent);
 
 angular.element(function() {
   angular.bootstrap(document, ["angularReact"]);
