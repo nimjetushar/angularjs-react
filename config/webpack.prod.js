@@ -2,8 +2,7 @@ const webpackMerge = require("webpack-merge"),
   commonConfig = require("./webpack.common.js"),
   OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"),
   path = require("path"),
-  rootDir = path.resolve(__dirname, ".."),
-  CleanWebpackPlugin = require("clean-webpack-plugin");
+  rootDir = path.resolve(__dirname, "..");
 
 module.exports = webpackMerge(commonConfig, {
   mode: "production",
@@ -13,5 +12,5 @@ module.exports = webpackMerge(commonConfig, {
     filename: "[name].js",
     chunkFilename: "[id].chunk.js"
   },
-  plugins: [new CleanWebpackPlugin(["dist"]), new OptimizeCSSAssetsPlugin({})]
+  plugins: [new OptimizeCSSAssetsPlugin({})]
 });

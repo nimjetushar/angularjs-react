@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     polyfills: "./polyfills.js",
     vendor: "./vendor.js",
-    app: "./src/main.js"
+    app: "./src/app.js"
   },
 
   resolve: {
@@ -72,5 +72,7 @@ module.exports = {
     splitChunks: {
       chunks: "all"
     }
-  }
+  },
+
+  stats: { warnings: false }
 };
