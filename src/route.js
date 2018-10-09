@@ -10,7 +10,7 @@ export default function routerConfig(
   $locationProvider
 ) {
   $locationProvider.hashPrefix("");
-  // $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);   // using this html 5 mode is enabled
   $urlRouterProvider.otherwise("/landing");
 
   $stateProvider
@@ -20,6 +20,19 @@ export default function routerConfig(
     })
     .state("about", {
       url: "/about",
-      component: "aboutComponent"
+      lazyLoad: function($transition$) {
+        const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
+
+        return import("./about/aboutComponent.js")
+          .then(mod => $ocLazyLoad.load(mod.default))
+          .catch(err => {
+            throw new Error("Ooops, something went wrong, " + err);
+          });
+      }
+    })
+    .state("help", {
+      url: "/help",
+      templateUrl: "./help/help.html",
+      controller: "helpCtrl"
     });
 }
