@@ -18,13 +18,15 @@ export default function routerConfig(
       url: "/landing",
       component: "landingComponent"
     })
-    .state("about", {
+    .state("about.**", {
       url: "/about",
       lazyLoad: function($transition$) {
         const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
 
-        return import("./about/aboutComponent.js")
-          .then(mod => $ocLazyLoad.load(mod.default))
+        return import("./about/aboutModule.js")
+          .then(mod => {
+            return $ocLazyLoad.load(mod.default);
+          })
           .catch(err => {
             throw new Error("Ooops, something went wrong, " + err);
           });
