@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/nimjetushar/angularjs-react#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@uirouter/angularjs": "^1.0.20",
     "angular": "1.7.4",
     "bootstrap": "^4.1.3",

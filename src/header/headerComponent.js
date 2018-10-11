@@ -1,6 +1,12 @@
-headerCtrl.$inject = [];
+headerCtrl.$inject = ["$scope"];
 
-function headerCtrl() {}
+function headerCtrl($scope) {
+  $scope.isNavOpen = false;
+
+  $scope.toggleNav = function() {
+    $scope.isNavOpen = !$scope.isNavOpen;
+  };
+}
 
 export default {
   templateUrl: "./headerComponent.html",

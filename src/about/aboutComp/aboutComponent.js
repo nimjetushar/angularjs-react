@@ -1,3 +1,5 @@
+import "./aboutComponent.scss"
+
 aboutCtrl.$inject = [];
 
 function aboutCtrl() {}

@@ -1,17 +1,22 @@
 import angular from "angular";
-import uiRouter from "@uirouter/angularjs";
 
-import aboutComponent from "./aboutComponent";
+import aboutComponent from "./aboutComp/aboutComponent";
 
 const ABOUT_MODULE = angular
   .module("AboutModule", [])
   .config([
-    "$stateProvider",
-    function($stateProvider) {
-      $stateProvider.state("about", {
+    "$stateRegistryProvider",
+    function($stateRegistry) {
+      // any two of the way can be used
+      $stateRegistry.register({
+        name: "about",
         url: "/about",
         component: "aboutComponent"
       });
+      // $stateProvider.state("about", {
+      //   url: "/about",
+      //   component: "aboutComponent"
+      // });
     }
   ])
   .component("aboutComponent", aboutComponent);
