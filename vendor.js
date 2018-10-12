@@ -1,5 +1,7 @@
+import "@babel/polyfill";
 import angular from "angular";
 import uiRouter from "@uirouter/angularjs";
-import "@babel/polyfill";
+import React from "react";
+import ReactDOM from "react-dom";
 
 import 'bootstrap/scss/bootstrap.scss'
