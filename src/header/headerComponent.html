@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" ng-class="{'show': isNavOpen}">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref="landing">Home</a>
+                <a class="nav-link" ui-sref="landing" ng-click="toggleNav()">Home</a>
             </li>
             <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref="about">About</a>
+                <a class="nav-link" ui-sref="about" ng-click="toggleNav()">About</a>
             </li>
             <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref="help">Help</a>
+                <a class="nav-link" ui-sref="help" ng-click="toggleNav()">Help</a>
             </li>
         </ul>
     </div>

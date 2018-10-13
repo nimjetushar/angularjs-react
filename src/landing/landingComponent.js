@@ -26,7 +26,9 @@ function landingController() {
       car_model: this.model,
       car_maker: this.maker
     };
-    this.data = this.data.concat([data]);
+    this.data.push(data);
+    this.model = "";
+    this.maker = "";
   };
 }
 
