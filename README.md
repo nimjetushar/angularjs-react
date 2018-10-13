@@ -4,7 +4,9 @@
 
 Angularjs integration with react
 
-This sample demonstrates the web application using AngularJs framework where React is used to render the UI and Webpack is used to build the application. 
+This sample demonstrates the web application using AngularJs framework where React is used to render the UI and Webpack is used to build the application.
+
+This sample will also help with adding react into your existing angularjs code.
 
 ## Start development server
 
