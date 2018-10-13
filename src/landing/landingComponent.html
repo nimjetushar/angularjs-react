@@ -1,0 +1,18 @@
+<div class="landing-cont">
+    <div class="form-group row">
+        <label for="maker" class="col-sm-2 col-form-label">Maker</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="maker" ng-model="$ctrl.maker"
+                placeholder="Enter maker">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="model" class="col-sm-2 col-form-label">Model</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="model" ng-model="$ctrl.model"
+                placeholder="Enter model">
+        </div>
+    </div>
+    <button class="btn btn-primary" ng-click="$ctrl.addContent()">Add Data</button>
+    <table-directive cols="$ctrl.cols" data="$ctrl.data"></table-directive>
+</div>

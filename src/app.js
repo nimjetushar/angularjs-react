@@ -6,13 +6,16 @@ import routerConfig from "./route";
 import rootComponent from "./rootComponent";
 import landingComponent from "./landing/landingComponent";
 import headerComponent from "./header/headerComponent";
-import "./help/helpController"
+import "./help/helpController";
+import tableDirective from "./landing/tableDir";
 
 appModule
   .config(routerConfig)
   .component("root", rootComponent)
   .component("header", headerComponent)
   .component("landingComponent", landingComponent)
+
+  .directive("tableDirective", tableDirective);
 
 angular.element(function() {
   angular.bootstrap(document, ["angularReact"]);

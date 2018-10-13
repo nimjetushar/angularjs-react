@@ -1,6 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Table from "../common/table/TableComponent";
+import mockData from "../../public/mock_data/data.json";
 
 landingController.$inject = [];
 
@@ -20,16 +18,19 @@ function landingController() {
     }
   ];
 
-  this.$postLink = function() {
-    const landing = document.getElementById("table-cont");
-    ReactDOM.render(<Table cols={this.cols} />, landing);
+  this.data = mockData.results;
+
+  this.addContent = function() {
+    const data = {
+      id: this.data.length + 1,
+      car_model: this.model,
+      car_maker: this.maker
+    };
+    this.data = this.data.concat([data]);
   };
 }
 
 export default {
-  template: `
-  <div>
-    <div id="table-cont"></div>
-  </div>`,
+  templateUrl: "./landingComponent.html",
   controller: landingController
 };

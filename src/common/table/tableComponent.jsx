@@ -6,20 +6,28 @@ class Table extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+
   render() {
     const header = this.props.cols.map((col, idx) => (
       <th key={idx}>{col.label}</th>
     ));
+
+    const tableBody = this.props.data.map((data, idx) => (
+      <tr key={idx}>
+        {this.props.cols.map((col, i) => (
+          <td key={i}>{data[col.value]}</td>
+        ))}
+      </tr>
+    ));
     return (
-      <table>
+      <table className="table">
         <thead>
           <tr>{header}</tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Hello</td>
-          </tr>
-        </tbody>
+        <tbody>{tableBody}</tbody>
       </table>
     );
   }
