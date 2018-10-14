@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Table from "../common/table/tableComponent"
+import Table from "../common/table/tableComponent";
 
 export default function tableDirective() {
   return {
@@ -10,11 +10,11 @@ export default function tableDirective() {
       cols: "=",
       data: "="
     },
-    link: function(scope, el, attrs) {
+    link: function(scope) {
       const reactapp = document.getElementById("table-cont");
       scope.$watch("data", watcher, true);
 
-      function watcher(newValue, oldValue) {
+      function watcher(newValue) {
         if (newValue) {
           ReactDOM.render(
             <Table cols={scope.cols} data={newValue} />,
