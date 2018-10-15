@@ -1,20 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Angular React</a>
     <button class="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation"
-        ng-click="toggleNav()">
+        ng-click="$ctrl.toggleNav()">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" ng-class="{'show': isNavOpen}">
+    <div class="collapse navbar-collapse" ng-class="{'show': $ctrl.isNavOpen}">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref="landing" ng-click="toggleNav()">Home</a>
+                <a class="nav-link" ui-sref="landing" ng-click="$ctrl.toggleNav()">Home</a>
             </li>
             <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref="about" ng-click="toggleNav()">About</a>
+                <a class="nav-link" ui-sref="about" ng-click="$ctrl.toggleNav()">About</a>
             </li>
             <li class="nav-item" ui-sref-active="active">
-                <a class="nav-link" ui-sref="help" ng-click="toggleNav()">Help</a>
+                <a class="nav-link" ui-sref="help" ng-click="$ctrl.toggleNav()">Help</a>
             </li>
         </ul>
     </div>

@@ -1,10 +1,10 @@
-headerCtrl.$inject = ["$scope"];
+headerCtrl.$inject = [];
 
-function headerCtrl($scope) {
-  $scope.isNavOpen = false;
+function headerCtrl() {
+  this.isNavOpen = false;
 
-  $scope.toggleNav = function() {
-    $scope.isNavOpen = !$scope.isNavOpen;
+  this.toggleNav = function() {
+    this.isNavOpen = !this.isNavOpen;
   };
 }
 
