@@ -4,7 +4,7 @@ import Table from "./tableComponent";
 
 describe("Table", () => {
   it("should render correctly", () => {
-    const component = shallow(<Table />);
+    shallow(<Table />);
   });
 
   it("should render initial layout", () => {
