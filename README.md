@@ -1,6 +1,7 @@
 # AngularJs + React + Webpack
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/50daf481d59a4a1fad4ec21e5cb488b2)](https://www.codacy.com/app/tpn/angularjs-react?utm_source=github.com&utm_medium=referral&utm_content=nimjetushar/angularjs-react&utm_campaign=Badge_Grade)
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/nimjetushar/angularjs-react)
 
 Angularjs integration with react
 
