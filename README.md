@@ -41,5 +41,5 @@ Uses jest snapshot feature for react components plus react component unit testin
 
 ## Licence
 
-[![GitHub license](https://img.shields.io/github/license/nimjetushar/angularjs-react.svg)](https://github.com/nimjetushar/angularjs-react/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/nimjetushar/angularjs-react.svg)](https://github.com/nimjetushar/angularjs-react/blob/master/LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/nimjetushar/angularjs-react.svg)](https://greenkeeper.io/)
 
