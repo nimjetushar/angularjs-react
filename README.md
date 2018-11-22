@@ -2,6 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ef9fd1b6102481597e7e3b5c9e0a3dd)](https://www.codacy.com/app/tushar/angularjs-react?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nimjetushar/angularjs-react&amp;utm_campaign=Badge_Grade)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/nimjetushar/angularjs-react)
+ [![Greenkeeper badge](https://badges.greenkeeper.io/nimjetushar/angularjs-react.svg)](https://greenkeeper.io/)
 
 Angularjs integration with react
 
@@ -41,5 +42,5 @@ Uses jest snapshot feature for react components plus react component unit testin
 
 ## Licence
 
-[![GitHub license](https://img.shields.io/github/license/nimjetushar/angularjs-react.svg)](https://github.com/nimjetushar/angularjs-react/blob/master/LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/nimjetushar/angularjs-react.svg)](https://greenkeeper.io/)
+[![GitHub license](https://img.shields.io/github/license/nimjetushar/angularjs-react.svg)](https://github.com/nimjetushar/angularjs-react/blob/master/LICENSE)
 
