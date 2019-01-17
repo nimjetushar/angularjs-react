@@ -25,7 +25,7 @@
   "dependencies": {
     "@babel/polyfill": "7.2.5",
     "@uirouter/angularjs": "1.0.21",
-    "angular": "1.7.5",
+    "angular": "1.7.6",
     "bootstrap": "4.2.1",
     "oclazyload": "1.1.0",
     "prop-types": "15.6.2",
@@ -38,7 +38,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/preset-env": "7.2.3",
     "@babel/preset-react": "7.0.0",
-    "angular-mocks": "1.7.5",
+    "angular-mocks": "1.7.6",
     "angularjs-template-loader": "0.1.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
