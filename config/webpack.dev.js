@@ -4,21 +4,23 @@ const webpackMerge = require("webpack-merge"),
   rootDir = path.resolve(__dirname, ".."),
   port = require("../config.json").port;
 
-module.exports = webpackMerge(commonConfig, {
-  devtool: "cheap-module-eval-source-map",
-  mode: "development",
+module.exports = (mode) => {
+  return webpackMerge(commonConfig(mode), {
+    devtool: "cheap-module-eval-source-map",
+    mode: "development",
 
-  output: {
-    path: path.resolve(rootDir, "dist"),
-    publicPath: `http://localhost:${port}/`,
-    filename: "[name].js",
-    chunkFilename: "[name].chunk.js"
-  },
+    output: {
+      path: path.resolve(rootDir, "dist"),
+      publicPath: `http://localhost:${port}/`,
+      filename: "[name].js",
+      chunkFilename: "[name].chunk.js"
+    },
 
-  devServer: {
-    inline: true,
-    port: port,
-    historyApiFallback: true,
-    stats: "minimal"
-  }
-});
+    devServer: {
+      inline: true,
+      port: port,
+      historyApiFallback: true,
+      stats: "minimal"
+    }
+  });
+}

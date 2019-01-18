@@ -4,13 +4,15 @@ const webpackMerge = require("webpack-merge"),
   path = require("path"),
   rootDir = path.resolve(__dirname, "..");
 
-module.exports = webpackMerge(commonConfig, {
-  mode: "production",
-  output: {
-    path: path.resolve(rootDir, "dist"),
-    publicPath: "./",
-    filename: "[name].js",
-    chunkFilename: "[name].chunk.js"
-  },
-  plugins: [new OptimizeCSSAssetsPlugin({})]
-});
+module.exports = mode => {
+  return webpackMerge(commonConfig(mode), {
+    mode: "production",
+    output: {
+      path: path.resolve(rootDir, "dist"),
+      publicPath: "./",
+      filename: "[name].js",
+      chunkFilename: "[name].chunk.js"
+    },
+    plugins: [new OptimizeCSSAssetsPlugin({})]
+  });
+}
