@@ -1,7 +1,8 @@
 const webpack = require("webpack"),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
   path = require("path"),
-  MiniCssExtractPlugin = require("mini-css-extract-plugin");
+  MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -15,37 +16,34 @@ module.exports = {
   },
 
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          {
+        use: [{
             loader: "babel-loader"
           },
           {
-            loader:
-              "angularjs-template-loader?relativeTo:" +
+            loader: "angularjs-template-loader?relativeTo:" +
               path.resolve(__dirname, "../src")
           }
         ]
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: { minimize: true }
+        use: [{
+          loader: "html-loader",
+          options: {
+            minimize: true
           }
-        ]
+        }]
       },
       {
         test: /\.scss$/,
         use: [
           // fallback to style-loader in development
-          process.env.NODE_ENV !== "production"
-            ? "style-loader"
-            : MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV !== "production" ?
+          "style-loader" :
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader"
         ]
@@ -65,7 +63,15 @@ module.exports = {
     new webpack.ProvidePlugin({}),
     new MiniCssExtractPlugin({
       filename: "[name].css"
-    })
+    }),
+    new CopyWebpackPlugin(
+      [{
+        from: path.resolve(__dirname, "../src/partialViews/*"),
+        to: ""
+      }], {
+        ignore: ['*.js', '*.css']
+      }
+    )
   ],
 
   optimization: {
@@ -74,5 +80,7 @@ module.exports = {
     }
   },
 
-  stats: { warnings: false }
+  stats: {
+    warnings: false
+  }
 };

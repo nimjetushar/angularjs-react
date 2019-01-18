@@ -45,6 +45,7 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.5",
     "babel-plugin-angularjs-annotate": "0.10.0",
+    "copy-webpack-plugin": "^4.6.0",
     "css-loader": "2.1.0",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
