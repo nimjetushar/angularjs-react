@@ -24,8 +24,8 @@
   "homepage": "https://github.com/nimjetushar/angularjs-react#readme",
   "dependencies": {
     "@babel/polyfill": "7.2.5",
-    "@uirouter/angularjs": "1.0.21",
     "angular": "1.7.6",
+    "angular-ui-router": "1.0.20",
     "bootstrap": "4.2.1",
     "oclazyload": "1.1.0",
     "prop-types": "15.6.2",

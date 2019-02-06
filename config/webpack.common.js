@@ -58,7 +58,7 @@ module.exports = mode => {
     },
 
     plugins: [
-      new CleanWebpackPlugin(['dist']),
+      new CleanWebpackPlugin([path.resolve(__dirname, '../dist')], { allowExternal: true }),
       new HtmlWebpackPlugin({
         template: "./index.html", // Input FileName
         filename: "./index.html" // Output FileName

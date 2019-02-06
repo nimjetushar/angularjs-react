@@ -20,16 +20,19 @@ export default function routerConfig(
     })
     .state("about.**", {
       url: "/about",
-      lazyLoad: function($transition$) {
-        const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
-
-        return import("./about/aboutModule.js")
-          .then(mod => {
-            return $ocLazyLoad.load(mod.default);
-          })
-          .catch(err => {
-            throw new Error("Ooops, something went wrong, " + err);
+      resolve: {
+        abouteModule: ['$q', '$ocLazyLoad', '$state', function ($q, $ocLazyLoad, $state) {
+          let deferred = $q.defer();
+          require.ensure([], function () {
+            let module = require('./about/aboutModule.js');
+            $ocLazyLoad.load({
+              name: module.default.name
+            });
+            $state.go("about");
+            deferred.resolve(module);
           });
+          return deferred.promise;
+        }]
       }
     })
     .state("help", {
