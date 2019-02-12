@@ -26,7 +26,7 @@
     "@babel/polyfill": "7.2.5",
     "angular": "1.7.6",
     "angular-ui-router": "1.0.20",
-    "bootstrap": "4.2.1",
+    "bootstrap": "4.3.0",
     "oclazyload": "1.1.0",
     "prop-types": "15.7.0",
     "react": "16.8.1",
