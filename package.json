@@ -30,7 +30,7 @@
     "oclazyload": "1.1.0",
     "prop-types": "15.7.2",
     "react": "16.8.4",
-    "react-dom": "16.8.3"
+    "react-dom": "16.8.4"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
