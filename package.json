@@ -43,7 +43,7 @@
     "angularjs-template-loader": "0.1.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
-    "babel-jest": "24.5.0",
+    "babel-jest": "24.7.1",
     "babel-loader": "8.0.5",
     "babel-plugin-angularjs-annotate": "0.10.0",
     "clean-webpack-plugin": "2.0.1",
