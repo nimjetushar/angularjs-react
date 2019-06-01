@@ -44,7 +44,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "24.5.0",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.0.6",
     "babel-plugin-angularjs-annotate": "0.10.0",
     "clean-webpack-plugin": "2.0.1",
     "copy-webpack-plugin": "5.0.2",
