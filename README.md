@@ -7,6 +7,7 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nimjetushar/angularjs-react)](https://dependabot.com)
 <br/>
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/nimjetushar/angularjs-react)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nimjetushar/angularjs-react.svg)
 
 Angularjs integration with react
 
