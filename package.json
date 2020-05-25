@@ -41,7 +41,7 @@
     "@babel/preset-react": "7.0.0",
     "@fourjs/eslint-config-tn": "1.0.1",
     "angular-mocks": "1.7.8",
-    "angularjs-template-loader": "0.1.1",
+    "angularjs-template-loader": "0.1.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "25.5.1",
     "babel-eslint": "10.1.0",
