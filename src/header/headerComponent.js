@@ -1,14 +1,14 @@
-headerCtrl.$inject = [];
-
 function headerCtrl() {
   this.isNavOpen = false;
 
-  this.toggleNav = function() {
+  this.toggleNav = () => {
     this.isNavOpen = !this.isNavOpen;
   };
 }
 
+headerCtrl.$inject = [];
+
 export default {
-  templateUrl: "./headerComponent.html",
-  controller: headerCtrl
+  controller: headerCtrl,
+  templateUrl: './headerComponent.html'
 };

@@ -1,14 +1,15 @@
-import LandingComponent from "./landingComponent";
+import LandingComponent from './landingComponent';
 
-describe("component -> LandingComponent", () => {
-  var component;
+describe('component -> LandingComponent', () => {
+  let component;
   beforeEach(() => {
     component = new LandingComponent.controller();
   });
 
-  it("should add data on add", function() {
-    var initialNoOfData = component.data.length;
+  it('should add data on add', () => {
+    const initialNoOfData = component.data.length;
+    expect(component.data).toHaveLength(initialNoOfData);
     component.addContent();
-    expect(component.data.length).toBe(initialNoOfData + 1);
+    expect(component.data).toHaveLength(initialNoOfData + 1);
   });
 });

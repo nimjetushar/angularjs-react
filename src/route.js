@@ -1,43 +1,43 @@
-routerConfig.$inject = [
-  "$stateProvider",
-  "$urlRouterProvider",
-  "$locationProvider"
-];
-
 export default function routerConfig(
   $stateProvider,
   $urlRouterProvider,
   $locationProvider
 ) {
-  $locationProvider.hashPrefix("");
+  $locationProvider.hashPrefix('');
   // $locationProvider.html5Mode(true);   // using this html 5 mode is enabled
-  $urlRouterProvider.otherwise("/landing");
+  $urlRouterProvider.otherwise('/landing');
 
   $stateProvider
-    .state("landing", {
-      url: "/landing",
-      component: "landingComponent"
+    .state('landing', {
+      component: 'landingComponent',
+      url: '/landing',
     })
-    .state("about.**", {
-      url: "/about",
+    .state('about.**', {
       resolve: {
-        abouteModule: ['$q', '$ocLazyLoad', '$state', function ($q, $ocLazyLoad, $state) {
-          let deferred = $q.defer();
-          require.ensure([], function () {
-            let module = require('./about/aboutModule.js');
+        abouteModule: ['$q', '$ocLazyLoad', '$state', ($q, $ocLazyLoad, $state) => {
+          const deferred = $q.defer();
+          require.ensure([], () => {
+            const module = require('./about/aboutModule.js');
             $ocLazyLoad.load({
               name: module.default.name
             });
-            $state.go("about");
+            $state.go('about');
             deferred.resolve(module);
           });
           return deferred.promise;
         }]
-      }
+      },
+      url: '/about'
     })
-    .state("help", {
-      url: "/help",
-      templateUrl: "./help/help.html",
-      controller: "helpCtrl"
+    .state('help', {
+      controller: 'helpCtrl',
+      templateUrl: './help/help.html',
+      url: '/help'
     });
 }
+
+routerConfig.$inject = [
+  '$stateProvider',
+  '$urlRouterProvider',
+  '$locationProvider'
+];

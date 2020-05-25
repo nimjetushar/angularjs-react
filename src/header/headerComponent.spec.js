@@ -1,17 +1,17 @@
-import HeaderComponent from "./headerComponent";
+import HeaderComponent from './headerComponent';
 
-describe("component -> HeaderComponent", () => {
-  var component;
+describe('component -> HeaderComponent', () => {
+  let component;
 
   beforeEach(() => {
     component = new HeaderComponent.controller();
   });
 
-  it("should close the navbar", function() {
+  it('should close the navbar', () => {
     expect(component.isNavOpen).toBe(false);
   });
 
-  it("should toggle menu bar", function() {
+  it('should toggle menu bar', () => {
     component.toggleNav();
     expect(component.isNavOpen).toBe(true);
   });

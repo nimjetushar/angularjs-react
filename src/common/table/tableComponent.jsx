@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Table extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class Table extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
+    console.log('componentDidMount');
   }
 
   render() {

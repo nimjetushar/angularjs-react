@@ -1,19 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Table from "../common/table/tableComponent";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Table from '../common/table/tableComponent';
 
 export default function tableDirective() {
   return {
-    template: '<div id="table-cont"></div>',
-    restrict: "E",
-    scope: {
-      cols: "=",
-      data: "="
-    },
-    link: function(scope) {
-      const reactapp = document.getElementById("table-cont");
-      scope.$watch("data", watcher, true);
-
+    link: (scope) => {
+      const reactapp = document.getElementById('table-cont');
       function watcher(newValue) {
         if (newValue) {
           ReactDOM.render(
@@ -22,6 +14,14 @@ export default function tableDirective() {
           );
         }
       }
-    }
+
+      scope.$watch('data', watcher, true);
+    },
+    restrict: 'E',
+    scope: {
+      cols: '=',
+      data: '='
+    },
+    template: '<div id="table-cont"></div>'
   };
 }

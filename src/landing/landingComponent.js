@@ -1,38 +1,39 @@
-import mockData from "../../public/mock_data/data.json";
+/* eslint-disable camelcase */
 
-landingController.$inject = [];
+import mockData from '../../public/mock_data/data.json';
 
 function landingController() {
   this.cols = [
     {
-      label: "Id",
-      value: "id"
+      label: 'Id',
+      value: 'id'
     },
     {
-      label: "Model",
-      value: "car_model"
+      label: 'Model',
+      value: 'car_model'
     },
     {
-      label: "Maker",
-      value: "car_maker"
+      label: 'Maker',
+      value: 'car_maker'
     }
   ];
 
   this.data = mockData.results;
 
-  this.addContent = function() {
+  this.addContent = () => {
     const data = {
-      id: this.data.length + 1,
+      car_maker: this.maker,
       car_model: this.model,
-      car_maker: this.maker
+      id: this.data.length + 1
     };
     this.data.push(data);
-    this.model = "";
-    this.maker = "";
+    this.model = '';
+    this.maker = '';
   };
 }
+landingController.$inject = [];
 
 export default {
-  templateUrl: "./landingComponent.html",
-  controller: landingController
+  controller: landingController,
+  templateUrl: './landingComponent.html'
 };
