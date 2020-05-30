@@ -10,7 +10,7 @@ export default function routerConfig(
   $stateProvider
     .state('landing', {
       component: 'landingComponent',
-      url: '/landing',
+      url: '/landing'
     })
     .state('about.**', {
       resolve: {
