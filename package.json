@@ -38,7 +38,7 @@
     "@babel/core": "7.10.1",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/preset-env": "7.4.2",
-    "@babel/preset-react": "7.0.0",
+    "@babel/preset-react": "7.12.7",
     "@fourjs/eslint-config-tn": "4.1.0",
     "angular-mocks": "1.7.8",
     "angularjs-template-loader": "0.1.2",
